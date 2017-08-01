@@ -1,0 +1,26 @@
+@CHARSET "UTF-8";
+header{
+    background:black;
+    height:auto;
+   color:white;
+}
+*{
+    padding:0px;
+    margin:0;
+}
+#htext{
+    padding:10px;
+    display:inline-block;
+    width:80%;
+    font-size:4.5em;
+}
+#hlogo{
+    display:inline-block;
+    width:10%;
+    height:100%;
+    float:right;
+    
+}
+header #hlogo i{
+    padding-top:20px;
+}
