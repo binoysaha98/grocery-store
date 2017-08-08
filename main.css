@@ -1,8 +1,13 @@
 @CHARSET "UTF-8";
-header{
+header,footer{
     background:black;
     height:auto;
    color:white;
+   
+}
+footer{
+    margin-top:20px;
+    clear:both;
 }
 *{
     padding:0px;
@@ -17,7 +22,6 @@ header{
 #hlogo{
     display:inline-block;
     width:10%;
-    height:100%;
     float:right;
     
 }
