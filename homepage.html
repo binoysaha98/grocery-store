@@ -1,6 +1,7 @@
  <html>
 <head>
 <title>Leaf-Store</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://use.fontawesome.com/ea79d9acdf.js"></script>
 <link rel="stylesheet" href="main.css">
 <link rel="stylesheet" href="sidecss.css">
@@ -25,15 +26,42 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
 }
-
+.login_form{
+  border:1px solid red;
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+}
+.hidden{
+ display:none; 
+}
 li a:hover {
     background-color: #111;
+}
+.login_form{
+  border:1px solid red;
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+
+}
+.hidden{
+  
 }
 </style>
 </head>
 <body>
 <!--Header -->
   <header>
+  
         <div id="htext"><p>Leaf-Store</p></div>
         <div id="hlogo"><i class="fa fa-leaf fa-4x" aria-hidden="true"></i></div>  
     </header>
@@ -43,11 +71,14 @@ li a:hover {
   <li><a href="#news">News</a></li>
   <li><a href="#contact">Contact</a></li>
   <li><a href="#about">About</a></li>
+  <li><a href="register_button.php">Register</a></li>
+  <li><a id="login_button">Login</a></li>
 </ul>
+
 
 <!--main body -->
 
-<div class="container">
+<div class="container" >
 <div class="third container">
   <div class="card" style="min-height:460px;padding:0px !important">
   <img src="images/bat.jpg" alt="emma_ji" 
@@ -92,6 +123,13 @@ li a:hover {
 </div>
 </div>
 
+<div id="form" class="login_form hidden">
+  <form name="myForm" action="/action_page_post.php" onsubmit="return validateForm()" method="post">
+Name: <input type="text" name="fname">
+<input type="submit" value="Submit">
+</form>
+Try it Yourself »
+</div>
 <!-- Footer -->
 <footer class="w3-container w3-theme-dark w3-padding-16">
   <h3>Footer</h3>
@@ -100,6 +138,12 @@ li a:hover {
   <p>Remember to check out our socks</p>
 </footer>
 
+<script>
+
+    $("#login_button").click(function(){
+    $(".login_form").removeClass('hidden');
+  });
+</script>
 
 </body>
  
